@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clash des boss</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_buy.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Coffres :</h2>
+        <div class="chest-container">
+        
+        </div>
+    </aside>
+    
+    <header class="main-header">
+        <div class="left">
+            <a href="/" class="back-link" title="Retour à la todo" style="display:inline-flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;background:transparent;color:inherit;text-decoration:none;font-weight:600;margin-right:8px;">
+                <span style="font-size:16px;line-height:1;">←</span>
+                <span>Retour</span>
+            </a>
+            <button class="boutique" id="switchView">Acheter des coffres</button>
+        </div>
+        <h1 id="titre">Clash des boss</h1>
+        <div class="right">
+            
+                <button class="gemmes">
+                    <!-- VALEUR AJOUTE GRACE AU JS -->
+                    —
+                    <img class = "gemme-image" src="image_fond/gems-icon-r-removebg-preview.png">
+                    <p id="plus">+</p>
+                </button>
+        </div>
+    </header>
+
+    <main>
+        <div id="drop-container" class="drop-container"></div>
+        <section id="collectionView" style="display: block;">
+        <div class="card-container">
+
+        <div class="card locked" data-card="ArcherQueen">
+            <img class="carte" src="images_cartes/champion/ArcherQueen.png" >
+           
+            <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        
+        <div class="card locked" data-card="BossBandit">
+            <img class="carte" src="images_cartes/champion/BossBandit.png" >
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="DarkPrince">
+            <img class="carte" src="images_cartes/epic/DarkPrince.png" >
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="eDragon">
+            <img class="carte" src="images_cartes/epic/eDragon.png" >
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Golem">
+            <img class = "carte" src="images_cartes/epic/Golem.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Guards">
+            <img class="carte" src="images_cartes/epic/Guards.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Witch">
+            <img class="carte" src="images_cartes/epic/Witch.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="XBow">
+            <img class="carte" src="images_cartes/epic/XBow.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="BattleHealer">
+            <img class="carte" src="images_cartes/rare/BattleHealer.png">
+            <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">10/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="DartGob">
+            <img class="carte" src="images_cartes/rare/DartGob.png">
+            <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div></div>
+        <div class="card locked" data-card="Giant">
+            <img class="carte" src="images_cartes/rare/Giant.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Hog">
+            <img class="carte" src="images_cartes/rare/Hog.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="MP">
+            <img class="carte" src="images_cartes/rare/MP.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Musk">
+            <img class="carte" src="images_cartes/rare/Musk.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Wiz">
+            <img class="carte" src="images_cartes/rare/Wiz.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Arrows">
+            <img class="carte" src="images_cartes/commun/Arrows.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="eBarbs">
+            <img class="carte" src="images_cartes/commun/eBarbs.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Bats">
+            <img class="carte" src="images_cartes/commun/Bats.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Horde">
+            <img class="carte" src="images_cartes/commun/Horde.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Knight">
+            <img class="carte" src="images_cartes/commun/Knight.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Mortar">
+            <img class="carte" src="images_cartes/commun/Mortar.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="RG">
+            <img class="carte" src="images_cartes/commun/RG.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="RoyalRecruits">
+            <img class="carte" src="images_cartes/commun/RoyalRecruits.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Bomber">
+            <img class="carte" src="images_cartes/commun/Bomber.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="Tesla">
+            <img class="carte" src="images_cartes/commun/Tesla.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="MagicArcher">
+            <img class="carte" src="images_cartes/legendaire/MagicArcher.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="MegaKnight_base">
+            <img class="carte" src="images_cartes/legendaire/MegaKnight_base.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="molosse-de-lave">
+            <img class="carte" src="images_cartes/legendaire/molosse-de-lave.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="princesse">
+            <img class="carte" src="images_cartes/legendaire/princesse.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        <div class="card locked" data-card="zappy">
+            <img class="carte" src="images_cartes/legendaire/zappy.png">
+        <div class="progress-wrapper">
+                <img class="progress-arrow" src="image_fond/flèche-bleue-33438785-removebg-preview.png" alt="flèche">
+                <div class="progress-container">
+                    
+                    <div class="progress-bar" style="width: 0%;">
+                        <span class="progress-text">0/20</span>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+        
+        </div>
+        </section>
+
+        <section id="boutiqueView" >
+<div class="coffre_container">
+    
+    <div class="coffre" data-type="wood">
+        <div class="coffre_acheter">
+        <h2>Coffre de Bois</h2>
+        <img src="coffre/wood.png" class="coffre_image">
+        <button class="acheter">10
+            <img src="image_fond/gems-icon-r-removebg-preview.png" class="gemme-image2">
+        </button>
+        </div>
+        <div class="contenu">
+            <h2>Contenu :</h2>
+            <p>📔Cartes : 2 <br>
+                🔵Commune : 1</p>
+        </div>
+
+    </div>
+
+    
+    <div class="coffre" data-type="gold">
+        <div class="coffre_acheter">
+        <h2>Coffre en Or</h2>
+        <img src="coffre/gold.webp" class="coffre_image">
+        <button class="acheter">20
+            <img src="image_fond/gems-icon-r-removebg-preview.png" class="gemme-image2">
+        </button>
+        </div>
+        <div class="contenu">
+            <h2>Contenu</h2>
+            <p>📔Cartes : 2<br>
+                🟠Rare : 1
+            </p>
+        </div>
+    </div>
+
+
+    <div class="coffre" data-type="giant">
+        <div class="coffre_acheter">
+        <h2>Coffre Géant</h2>
+        <img src="coffre/giant.webp" class="coffre_image">
+        <button class="acheter">50
+            <img src="image_fond/gems-icon-r-removebg-preview.png" class="gemme-image2">
+        </button>
+        </div class="contenu">
+            <div class="contenu">
+            <h2>Contenu</h2>
+            <p>📔Cartes : 5<br>
+                🟠Rare : 2
+            </p>
+        </div>
+    </div>
+
+
+    <div class="coffre" data-type="magic">
+        <div class="coffre_acheter">
+        <h2>Coffre Magic</h2>
+        <img src="coffre/magical.webp" class="coffre_image">
+        <button class="acheter">100
+            <img src="image_fond/gems-icon-r-removebg-preview.png" class="gemme-image2">
+        </button>
+        </div class="contenu">
+            <div class="contenu">
+            <h2>Contenu</h2>
+            <p>📔Cartes : 5<br>
+               🟣Epic : 1</p>
+        </div>
+    </div>
+
+    
+    <div class="coffre" data-type="legendaire">
+        <div class="coffre_acheter">
+        <h2>Coffre Légendaire</h2>
+        <img src="coffre/legendary.png" class="coffre_image">
+        <button class="acheter">150
+            <img src="image_fond/gems-icon-r-removebg-preview.png" class="gemme-image2">
+        </button>
+        </div>
+            <div class="contenu">
+            <h2>Contenu</h2>
+            <p>📔Cartes : 1<br>
+               🟡Légendaire : 1
+            </p>
+        </div>
+    </div>
+
+
+        <div class="coffre" data-type="foudre">
+            <div class="coffre_acheter">
+        <h2>Coffre Foudre</h2>
+        <img src="coffre/mlc.png" class="coffre_image">
+        <button class="acheter">300
+            <img src="image_fond/gems-icon-r-removebg-preview.png" class="gemme-image2">
+        </button>
+        </div>
+            <div class="contenu">
+            <h2>Contenu</h2>
+            <p>📔Cartes : 8<br>
+               🟡Légendaire : 1</p>
+        </div>
+    </div>
+
+
+    <div class="coffre" data-type="legendaire_du_boss">
+         <div class="coffre_acheter">
+        <h2>Coffre du Boss</h2>
+        <img src="coffre/legendarykings.png" class="coffre_image">
+        <button class="acheter">500
+            <img src="image_fond/gems-icon-r-removebg-preview.png" class="gemme-image2">
+        </button>
+        </div>
+            <div class="contenu">
+            <h2>Contenu</h2>
+            <p>📔Cartes : 10<br>
+               ⚫Champion : 1</p>
+        </div>
+    </div>
+</div>
+        </section>
+    </main>
+    
+    <script src="logic/clash.logic.js"></script>
+    <script src="script.js"></script>
+    <script src="drop-coffre.js"></script>
+</body>
+</html>

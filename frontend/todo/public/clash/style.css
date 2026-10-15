@@ -1,0 +1,415 @@
+
+/* -------------- LA POLICE Clash Royale---------------- */
+@font-face {
+    font-family: 'SupercellMagic';
+    src: url('Supercell-Magic.woff2') format('woff2'),
+         url('Supercell-Magic.woff') format('woff'),
+         url('Supercell-Magic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* -------------- STYLES DE TOUT ---------------- */
+body {
+    margin: 0;
+    display: flex;
+    font-family: 'SupercellMagic', Arial, sans-serif;
+    background-image: url('image_fond/GB5Adyp5zzQcoI4Jpbgf8tKfJ6GxgHmT8NHgtcrpi3o-fotor-2025111719180.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 1500px 1080px;
+    background-attachment: fixed;
+    text-shadow:
+       -1px -1px 0 #141414,  
+        1px -1px 0 #202020,
+       -1px  1px 0 #1a1a1a,
+        1px  1px 0 #000;
+    color: #fffffff5;
+}
+
+/* -------------- STYLES DE LA SIDEBAR ---------------- */
+.sidebar {
+    position: fixed;
+    left: 10px;
+    top: -50px;
+    bottom: 200px;
+    width: 200px;
+    background: linear-gradient(135deg, 
+    #3f59ad,   
+    #4960bd,   
+    #3d318a,   
+    #2b1172);
+    border: solid rgb(121, 161, 236) 2.5px;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0),
+    inset 0 0 20px rgba(255, 255, 255, 0.555);
+    margin-top: 100px;
+    border-radius: 40px;
+    padding: 20px;
+    height: auto;
+    bottom: 10px;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+/* -------------- STYLES DU HEADER ---------------- */
+.main-header {
+    margin-top: 8px;
+    margin-left: 5px ;
+    margin-right:5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #879ee7, #5365ad, #4e4391, #333285);
+    box-shadow:  0 10px 18px rgba(0,0,0,0.45),
+    inset 0 0 10px rgba(255, 255, 255, 0.63);
+    border-radius: 30px;
+    z-index: 100;
+}
+
+#plus{
+    position: fixed;
+    top : -2px;
+    right : 280px;
+    background-color: #7EE687;
+    border-radius: 15px;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    padding-right: 12px;
+    padding-left: 12px;
+    font-size: 35px;
+    font-weight: 800;
+    box-shadow: 0 7px 0 #19892B, 0 10px 18px rgba(0,0,0,0.45),
+    inset 0 0 15px rgb(45, 107, 37);
+    font-family: "Titan One", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    transition: transform 0.2s;
+}
+.boutique {
+    background: linear-gradient(to bottom, #4bfa4b, #03640b);
+    color: #ffffffde;
+    padding: 23px;
+    border-radius: 18px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 0px 18px rgba(0,0,0,0.45),
+    inset 0 0 15px rgb(147, 255, 152);
+    transition: transform 0.15s , box-shadow 0.1s ease;
+    text-shadow:
+       -1px -1px 0 #141414,  
+        1px -1px 0 #202020,
+       -1px  1px 0 #1a1a1a,
+        1px  1px 0 #000; /* contour noir */
+    font-family: 'SupercellMagic', Arial, sans-serif;
+    border: solid 1px #327730
+}
+
+.boutique:hover{
+    transform: scale(1.05);
+}
+
+.gemme-image{
+    position: fixed;
+    height: 105px;
+    top : 6px;
+    right : 0px;
+    
+}
+.gemmes {
+    min-width: 300px;
+    background: rgba(32, 32, 32, 0.6);
+    color: #ffffffde;
+    padding: 10px;
+    border-radius: 18px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 0px 18px rgba(0,0,0,0.45);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    text-shadow:
+       -1px -1px 0 #141414,  
+        1px -1px 0 #202020,
+       -1px  1px 0 #1a1a1a,
+        1px  1px 0 #000; 
+    font-family: 'SupercellMagic', Arial, sans-serif;
+    border: solid 1.5px rgb(48, 48, 48)
+}
+
+#plus:hover{
+    transform: scale(1.1);
+}
+
+/* -------------- STYLES DE L'ENSEMBLE DES CARTES ---------------- */
+.card-container {
+    margin-left: 250px;
+    margin-top: 150px;
+    margin-right: 15px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.5vw;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background-color: rgba(8, 22, 51, 0.863); /* bleu foncé */
+    border: 2.5px solid #28428a;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0),
+    inset 0 0 15px rgba(255, 255, 255, 0.37);
+    transition: transform 0.13s;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.card {
+    overflow: visible; 
+}
+/* --------- LE STYLE POUR LES CARTES UNE FOIS CLIQUE----------- */
+/* la classe card et data-showing3d */
+.card[data-showing3d="true"] {
+    z-index: 50; 
+}
+/* soit comme juste au dessus soit classe card / showing3d et une image avec classe carte */
+.card[data-showing3d="true"] img.carte, .card.showing3d img.carte {
+        transform: translateY(-40px) scale(1.4); 
+        max-width: none;
+         max-height: 200px;
+    }
+
+.card.lowered{
+    transform: translateY(16px) scale(1.06);
+}
+
+/* -------------- STYLES SPÉCIAUX POUR LES CARTES VERROUILLÉES ---------------- */
+.card.locked .carte{
+    filter: grayscale(100%) brightness(60%);
+    opacity: 0.5;
+}
+/*ajout d'un cadenas sur les cartes verrouillées sans modifier le html*/
+.card.locked::after {
+    content: '\1F512';
+    position: absolute;
+    font-size: 32px;
+    color: rgba(255,255,255,0.8);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card:hover{
+    transform: scale(1.1)
+}
+
+/*-----------L'IMAGE 3D-----------*/
+.card-3d-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.65);
+    z-index: 20000;
+    padding: 24px;
+}
+.card-3d-container {
+    max-width: min(80vw, 900px);
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25));
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-3d-container img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    transform-origin: center center;
+    transition: transform 0.25s ease;
+}
+/* -------------- STYLES DES COFFRES ---------------- */
+.chest-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.chest {
+    background: linear-gradient(180deg, #f0c949, #ff9f00 60%, #ff7a00);
+    border: 2px solid #b85a00;
+    color: #fff7e6;
+    padding: 18px;
+    border-radius: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 23px;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 0 #8a3f00, 0 10px 18px rgba(0,0,0,0.45);
+    transition: transform 0.15s ease, box-shadow 0.1s ease;
+    text-shadow:
+       -1px -1px 0 #141414,  
+        1px -1px 0 #202020,
+       -1px  1px 0 #1a1a1a,
+        1px  1px 0 #000; /* contour noir */
+    font-family: 'SupercellMagic', Arial, sans-serif;
+    
+}
+
+.chest:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #2b1e66, 0 3px 6px rgba(0,0,0,0.3);
+}
+.chest_img{
+    max-width: 130px;
+}
+.chest:hover{
+    transform:scale(1.05);
+}
+/* -------------- LA BARRE DE PROGRESSION DES COFFRES ---------------- */
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background: #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 0.5vw;
+    position: relative;
+}
+
+.progress-arrow {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: -5px;   
+    right: 50%; 
+    z-index: 10;
+}
+
+/* PARENT POUR LA FLECHE */
+.progress-wrapper {
+    width: 90%;
+    position: relative; 
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4f5bff, #3612ff);
+    border-radius: 2px 0 0 5px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+     text-shadow:
+       -1px -1px 0 #141414,  
+        1px -1px 0 #202020,
+       -1px  1px 0 #1a1a1a,
+        1px  1px 0 #000;
+    pointer-events: none; /*texte bloque pas clics */
+}
+/* -------------- LES SECTIONS ---------------- */
+main section {
+  display: none;
+}
+
+main section.active {
+  display: block;
+}
+/* -------------- L'ANIMATION DES CARTES QUI SORTENT DES COFFRES ---------------- */
+.drop-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* pour ne pas bloquer le clic */
+  z-index: 9999;
+
+}
+
+.drop-card {
+  position: absolute;
+  width: 180px;   /* taille fixe ou ajuste à tes images */
+  height: auto;
+  opacity: 0;
+  animation: dropAnim 1.5s forwards;
+}
+
+@keyframes dropAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) scale(1.3);
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(calc(var(--finalX) * 1px - 50%), calc(var(--finalY) * 1px - 50%)) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* -------------- LE RESPONSIVE ---------------- */
+@media (max-width: 1600px) {
+    .card-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 1020px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .sidebar {
+        width: 163px;
+    }
+    .card-container {
+        margin-left: 210px;
+        margin-right: 10px;
+    }
+    #titre{
+        display: none;
+    }
+
+}

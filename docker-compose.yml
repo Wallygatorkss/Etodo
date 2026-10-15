@@ -1,0 +1,62 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: container_db
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: etodo
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./e-todo.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
+    networks:
+      - etodo-network
+
+  backend:
+    # on creer une image a partir du dockerfile
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      network: host
+    container_name: container_backend
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=${PORT}
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRES_IN=${JWT_EXPIRES_IN}
+      - NODE_ENV=production # a remplacer par production quand on deploy ou par development quand on est en dev
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - etodo-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      network: host
+    container_name: container_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - etodo-network
+
+networks:
+  etodo-network:
+    driver: bridge
+
+volumes:
+  mysql_data:

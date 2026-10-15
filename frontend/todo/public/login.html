@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Se connecter</title>
+  <link rel="stylesheet" href="login.css" />
+  <script defer src="login.js"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <a href="prepage.html" class="back-button">
+    <i class='bx bx-arrow-back'></i> Retour
+  </a>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#" id="registerForm">
+        <h1>S'inscrire</h1>
+        <input type="text" placeholder="Prénom" id="firstname" required />
+        <input type="text" placeholder="Nom" id="name"required />
+        <input type="email" placeholder="Email" id="email" required />
+        <div class="password-group">
+          <input type="password" placeholder="Mot de passe" id="password" required />
+          <button type="button" class="toggle-password" aria-label="Afficher le mot de passe" data-target="password">
+            <i class='bx bx-show'></i>
+          </button>
+        </div>
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+
+    <div class="form-container sign-in-container">
+      <form action="#" id="loginForm">
+        <h1>Se Connecter</h1>
+        <input type="email" placeholder="Email" id="mailco" required />
+        <div class="password-group">
+          <input type="password" placeholder="Mot de passe" id="mdpco" required />
+          
+        </div>
+        <button type="submit">Se Connecter</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Bon retour!</h1>
+          <p>Entrez vos données personnelles pour utiliser les fonctionnalités du site</p>
+          <button class="ghost" id="signIn" type="submit">Se connecter</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Salut l'ami(e) !</h1>
+          <p>Enregistrez vos données personnelles pour utiliser les fonctionnalités du site</p>
+          <button class="ghost" id="signUp" type="submit">S'inscrire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="connexion.js"></script>
+</body>
+</html>

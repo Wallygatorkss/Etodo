@@ -1,0 +1,31 @@
+{
+  "name": "b-web-101-mpl-1-1-etodo-5",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "script/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitechBachelorPromo2028/B-WEB-101-MPL-1-1-etodo-5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpitechBachelorPromo2028/B-WEB-101-MPL-1-1-etodo-5/issues"
+  },
+  "homepage": "https://github.com/EpitechBachelorPromo2028/B-WEB-101-MPL-1-1-etodo-5#readme",
+  "dependencies": {
+  "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.15.3"
+  }
+}

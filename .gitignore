@@ -1,0 +1,31 @@
+# Node modules
+backend/node_modules/
+frontend/todo/node_modules/
+
+# Next.js build
+frontend/todo/.next/
+frontend/todo/out/
+frontend/todo/tsconfig.tsbuildinfo
+
+# autre
+frontend/todo/README.md
+modif.txt
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
